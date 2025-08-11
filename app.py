@@ -59,5 +59,7 @@ with gr.Blocks(title="AI Art Generator") as demo:
     btn.click(generate_image, [prompt, size, negative, seed], [out, status])
 
 if __name__ == "__main__":
+    import os
+    port = int(os.getenv("PORT", 7860))
     demo.launch(server_name="0.0.0.0")  # Changed for Spaces
 
