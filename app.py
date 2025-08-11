@@ -61,5 +61,10 @@ with gr.Blocks(title="AI Art Generator") as demo:
 if __name__ == "__main__":
     import os
     port = int(os.getenv("PORT", 7860))
-    demo.launch(server_name="0.0.0.0", server_port=port)  # Changed for Spaces
+    demo.launch(
+        server_name="0.0.0.0",
+        server_port=port,
+        show_api=False,   # avoids the gradio_client schema bug
+        share=True        # satisfies the “localhost not accessible” check
+    )
 
