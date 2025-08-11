@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: AI Art Generator
 emoji: 🎨
@@ -10,3 +11,8 @@ pinned: false
 ---
 
 Quintan's AI Art Generator
+=======
+# AI-Art-Generator
+Quintan's AI Art Generator.
+
+>>>>>>> dc4d8e5 (Initial clean commit)

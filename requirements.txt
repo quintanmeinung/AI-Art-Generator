@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 gradio==4.44.1
 gradio_client>=1.3.0
 python-dotenv>=1.0.1
 Pillow>=10.4.0
+=======
+gradio
+Pillow
+requests
+python-dotenv
+>>>>>>> dc4d8e5 (Initial clean commit)

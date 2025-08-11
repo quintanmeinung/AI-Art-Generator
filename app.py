@@ -59,6 +59,7 @@ with gr.Blocks(title="AI Art Generator") as demo:
     btn.click(generate_image, [prompt, size, negative, seed], [out, status])
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     import os
     port = int(os.getenv("PORT", 7860))
     demo.launch(
@@ -67,4 +68,7 @@ if __name__ == "__main__":
         show_api=False,   # avoids the gradio_client schema bug
         share=True        # satisfies the “localhost not accessible” check
     )
+=======
+    demo.launch()
+>>>>>>> dc4d8e5 (Initial clean commit)
 
