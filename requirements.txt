@@ -1,0 +1,4 @@
+gradio
+Pillow
+requests
+python-dotenv
