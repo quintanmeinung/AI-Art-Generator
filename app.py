@@ -9,6 +9,19 @@ try:
 except Exception:
     StabilityProvider = None
 
+# read secret (Space injects it at runtime)
+STABILITY_API_KEY = os.getenv("STABILITY_API_KEY")
+
+# pick provider
+use_stability = bool(STABILITY_API_KEY) and (StabilityProvider is not None)
+provider = (
+    StabilityProvider(api_key=STABILITY_API_KEY)  # adjust param name if different
+    if use_stability else
+    MockProvider()
+)
+
+print(f"Using provider: {'Stability' if use_stability else 'Mock'}")
+
 load_dotenv()  # loads STABILITY_API_KEY and PROVIDER from .env
 
 prov_name = os.getenv("PROVIDER", "mock").lower()
